@@ -13,65 +13,64 @@ $this->title = "Mon Blog -Billet simple pour l'Alaska "; ?>
 
     <article>
         <h1 id="boot_title2">A propos de l'auteur</h1>
-        <div id="plop">
+        <div id="one">
+            <div id="container_boot">
+                <p><img src="Contents/images/man.jpg" alt="man" class="portrait" title="Alain Forteroche"/>«Il est sur
+                    que Alain forteroche est sûrement le plus grand écrivain du monde» c'est ce qu'a affirmé Robert
+                    Desnos jeudi dernier à un parterre de journalistes rassemblés à Sophia Antipolis pour le rencontrer.
+                </p>
+
+                <p> Cette déclaration de Robert Desnos nous pousse à revenir sur la carrière de forteroche. Né en 1949
+                    Alain forteroche n'a eu cesse depuis d'épater la galerie par ces incessants apports dans le monde de
+                    la culture, des sciences en particulier au sein de la «confédération des écrivains de Sophia
+                    Antipolis de France et de Navarre» puissante association créée par Clovis Ier quand il prit le
+                    pouvoir un jeudi peu avant l'heure du repas.</p>
+
+                <p> Alain forteroche a entamé son chemin vers la gloire en inventant les tondeuses qui devinrent depuis
+                    le summum de la distinction pour tout homme moderne. En effet qui depuis n'a pas exhibé fièrement
+                    ses tondeuses à la foule envieuse ? Pour cela, les habitants de la planète entière et en particulier
+                    de Sophia Antipolis lui sont reconnaissants.</p>
+
+                <p>C'est par un beau jour en mars que forteroche a rencontré Jeanne Empeuplus et décida de la conquérir
+                    grâce à son charme et au prestige que lui avait donné l'invention des tondeuses. Jeanne Empeuplus
+                    dira pourtant plus tard «ce qui m'a fait le plus craquer chez Alain, c'est la proéminence de ses
+                    épaules!». Elle ne s'en est d'ailleurs jamais remis depuis.</p>
+                <p>15 ans plus tard il découvre dans une librairie poussiéreuse de Sophia Antipolis un livre de Robert
+                    Desnos intitulé : les tondeuses poussent sous les épaules de Jeanne.</p>
+            <p>Pour Alain forteroche c'est une révélation, il s'attelle à la rédaction de :«Les écrivains de Sophia
+                Antipolis gouverneront en mars », Une œuvre majeure qui l'occupera jusqu'à ce qu'il atteigne 68 ans cet
+                opus sortira en librairie jeudi prochain.</p>
+        <p>Le livre est tant attendu que son éditeur prétend pouvoir gagner, grâce à sa publication, une somme qui
+            pourrai atteindre 5620 euros et cinquante cents.</p>
+
+<p>Comme l'a si justement fait remarquer Robert Desnos «Ce livre est une œuvre impérissable que forteroche a écrit avec
+    ses épaules sans aucune concession.».</p></div></div>
+
+</article>
+
+<article>
+
+    <h1 id="boot_title2">Mes derniers chapitres</h1>
+
+
+    <?php foreach ($billets as $billet): ?>
         <div id="container_boot">
-           <p><img src="/Contents/images/man.jpg" alt="man" class="portrait"/>Généralement, on utilise un texte en faux
-                latin (le texte ne veut rien dire, il a été modifié), le Lorem ipsum ou Lipsum, qui permet donc de faire
-                office de texte d'attente. L'avantage de le mettre en latin est que l'opérateur sait au premier coup
-                d'oeil
-                que la page contenant ces lignes n'est pas valide, et surtout l'attention du client n'est pas dérangée
-                par
-                le contenu, il demeure concentré seulement sur l'aspect graphique.</p>
 
-            <p> Ce texte a pour autre avantage d'utiliser des mots de longueur variable, essayant de simuler une
-                occupation
-                normale. La méthode simpliste consistant à copier-coller un court texte plusieurs fois (« ceci est un
-                faux-texte ceci est un faux-texte ceci est un faux-texte ceci est un faux-texte ceci est un faux-texte
-                ») a
-                l'inconvénient de ne pas permettre une juste appréciation typographique du résultat final.</p>
-
-            <p> Il circule des centaines de versions différentes du Lorem ipsum, mais ce texte aurait originellement été
-                tiré de l'ouvrage de Cicéron, De Finibus Bonorum et Malorum (Liber Primus, 32), texte populaire à cette
-                époque, dont l'une des premières phrases est : « Neque porro quisquam est qui dolorem ipsum quia dolor
-                sit
-                amet, consectetur, adipisci velit... » (« Il n'existe personne qui aime la souffrance pour elle-même, ni
-                qui
-                la recherche ni qui la veuille pour ce qu'elle est... »).</p>
-
-            <p> Expert en utilisabilité des sites web et des logiciels, Jakob Nielsen souligne que l'une des limites de
-                l'utilisation du faux-texte dans la conception de sites web est que ce texte n'étant jamais lu, il ne
-                permet
-                pas de vérifier sa lisibilité effective. La lecture à l'écran étant plus difficile, cet aspect est
-                pourtant
-                essentiel. Nielsen préconise donc l'utilisation de textes représentatifs plutôt que du lorem ipsum. On
-                peut
-                aussi faire remarquer que les formules conçues avec du faux-texte ont tendance à sous-estimer l'espace
-                nécessaire à une titraille immédiatement intelligible, ce qui oblige les rédactions à formuler ensuite
-                des
-                titres simplificateurs, voire inexacts, pour ne pas dépasser l'espace imparti.</p></div>
+            <header>
+                <a href="<?= "billet/index/" . $billet['id'] ?>">
+                    <h1 class="titreBillet_boot"><?= $this->clean($billet['title']) ?></h1>
+                </a>
+                <time><?= $this->clean($billet['date']) ?></time>
+            </header>
+            <p><?= $this->clean(mb_substr(strip_tags($billet['contenu']), 0, 450)) ?>...<a
+                        href="<?= "billet/index/" . $billet['id'] ?>" class="suite">Lire la suite >></a></p>
+            <br/>
+            <a href="<?= "billet/index/" . $billet['id'] ?>">
         </div>
-    </article>
 
-
-    <div id="container_boot">
-        <h1 id="boot_title2">Mes derniers chapitres</h1>
-
-        <?php foreach ($billets as $billet): ?>
-            <div id="container_boot1">
-                <article>
-                    <header>
-                        <a href="<?= "billet/index/" . $billet['id'] ?>">
-                            <h1 class="titreBillet_boot"><?= $this->clean( $billet['title'] ) ?></h1>
-                        </a>
-                        <time><?= $this->clean( $billet['date'] ) ?></time>
-                    </header>
-                    <p><?= $this->clean( mb_substr( strip_tags( $billet['contenu'] ), 0, 450 ) ) ?>...<a
-                            href="<?= "billet/index/" . $billet['id'] ?>" class="suite">Lire la suite >></a></p>
-                    <br/>
-                    <a href="<?= "billet/index/" . $billet['id'] ?>">
-                </article>
-            </div>
-        <?php endforeach; ?>
-    </div>
+    <?php endforeach; ?>
+</article>
 </div>
+
+
 </body>

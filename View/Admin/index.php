@@ -2,11 +2,11 @@
 <?php
 $this->bodyclass = "formulaire"
 ?>
-<h2>Administration</h2>
+<h1>Administration</h1>
 
 
-<div id="compteur"><p>Bienvenue, <?= $this->clean( $login ) ?> </p><br/>
-    <p>Ce blog comporte <?= $this->clean( $nbBillets ) ?> billet(s) et <?= $this->clean( $nbCommentaires ) ?>
+<div id="compteur"><p>Bienvenue, <?= $this->clean($login) ?> </p><br/>
+    <p>Ce blog comporte <?= $this->clean($nbBillets) ?> billet(s) et <?= $this->clean($nbCommentaires) ?>
         commentaire(s).</p>
     <br/>
     <a href="connexion/deconnecter"><input type="button" name="deconnecter" value="Se déconnecter"
@@ -15,7 +15,20 @@ $this->bodyclass = "formulaire"
 
 
 <div class="wrapper">
+    <div id="container">
+        <div class="admin_boot">
+            <h3 class="articles">Gestion des articles <br /> <a href="admin/articles"><input type="button" name="articles"
+                                                                                      value="Go !"
+                                                                                      class="bouton"></a></h3></div>
+    </div>
+    <div id="container">
+        <div class="admin_boot">
+            <h3 class="articles">Gestion des commentaires <br /><a href="admin/listCom"><input type="button" name="comments"
+                                                                                    value="Go !"
+                                                                                    class="bouton"></a></h3>
 
+        </div>
+    </div>
     <div id="container">
         <div class="admin_boot">
             <h3>Changement de mot de passe</h3><br/>
@@ -55,16 +68,5 @@ $this->bodyclass = "formulaire"
         </div>
     </div>
 
-    <div id="container">
-        <div class="admin_boot">
-            <h3 class="articles">Gestion des articles <a href="admin/articles"><input type="button" name="articles"
-                                                                                      value="Go !"
-                                                                                      class="bouton"></a></h3>
 
-            <h3 class="com">Gestion des commentaires <a href="admin/listCom"><input type="button" name="comments"
-                                                                              value="Go !"
-                                                                              class="bouton"></a></h3>
-
-        </div>
-    </div>
 </div>

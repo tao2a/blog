@@ -2,7 +2,7 @@
 $this->title = "Mon Blog - Administration";
 $this->bodyclass = "formulaire"
 ?>
-
+<div id="newWrap">
 <h1>Edition des Articles</h1>
 
 <form method="post" action="admin/edit/<?=$billet['id']?>">
@@ -16,3 +16,4 @@ $this->bodyclass = "formulaire"
 
         <input type="submit" value="Modifier l'article" class="bouton1"/>
 </form>
+</div>

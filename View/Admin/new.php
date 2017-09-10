@@ -1,8 +1,7 @@
-<?php $this->title = "Mon Blog - Administration" ?>
-<?php
+<?php $this->title = "Mon Blog - Administration";
 $this->bodyclass = "formulaire"
 ?>
-
+<div id="newWrap">
 <form method="post" action="admin/newPost">
     <input id="author" name="title" placeholder="Titre"  required />
     <br/>
@@ -14,3 +13,4 @@ $this->bodyclass = "formulaire"
 
     <input type="submit" value="Postez votre article" class="bouton1"/>
 </form>
+</div>

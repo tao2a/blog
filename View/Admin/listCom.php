@@ -7,34 +7,54 @@
  */
 $this->bodyclass = "formulaire"
 ?>
-
 <h1 class="t_title">Gestion des commentaires</h1>
 
-<h2>Liste des commentaires : </h2>
+<table>
+    <thead>
+    <tr class="titre_table">
+        <th>Auteur</th>
+        <th>Date</th>
+        <th>Commentaire</th>
+        <th>Nombre de signalement</th>
+    </tr>
+    </thead>
 
-<br/>
-<div id="reponses">
+    <tbody>
+    <?php foreach ($comments as $comment) : ?>
 
-    <?php
+        <tr>
+        <td>
+            <h3 class="titreBillet"><?= $this->clean($comment['author']) ?></h3>
+        </td>
+        <td>
+            <time><?= $this->clean($comment['date']) ?></time>
+        </td>
+        <td>
+            <h3><?= $this->clean($comment['contenu']) ?></h3>
+        </td>
+        <td>
+            <h3><?= $comment['alert'] ?></h3>
+        </td>
 
-    foreach ($comments as $comment) : ?>
-    <div id="reponse">
 
-        <p><?= $this->clean( $comment['author'] ) ?> : </p>
-        <time><?= $this->clean( $comment['date'] ) ?></time>
-        <p><?= $this->clean( $comment['contenu'] ) ?></p>
-        <h4>Nombre de signalement : <?= $comment['alert'] ?></h4>
-
-        <a id="bouton" href="admin/deleteComment/<?= $comment['id'] ?>"><input type="button" name="Supprimer"
-                                                                                 value="Supprimer"
-                                                                                 class="bouton"></a>
+        <td><a id="bouton" href="admin/deleteComment/<?= $comment['id'] ?>"><input type="button" name="Supprimer"
+                                                                                   value="Supprimer"
+                                                                                   class="bouton_signal"></a></td>
         <?php if ($comment['alert'] > 0) : ?>
-            <a id="bouton" href="admin/removeSignal/<?= $comment['id'] ?>"><input type="button" name="Supprimer"
-                                                                                    value="RAZ des signalements"
-                                                                                    class="bouton1"></a>
+            <td><a id="bouton" href="admin/removeSignal/<?= $comment['id'] ?>"><input type="button" name="Supprimer"
+                                                                                      value="RAZ des signalements"
+                                                                                      class="bouton1"></a></td>
 
-
+            </tr>
         <?php endif; ?>
-    </div>
+
     <?php endforeach; ?>
-</div>
+
+    </tbody>
+</table>
+
+
+
+
+
+

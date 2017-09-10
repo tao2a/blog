@@ -23,7 +23,7 @@ $this->bodyclass = "formulaire"
     <?php foreach ($billets as $billet): ?>
 
         <tr>
-            <td><a href="<?= "billet/index/" . $billet['id'] ?>"><h3 class="titreBillet"><?= $this->clean( $billet['title'] ) ?></h3></a></td>
+            <td><h3 class="titreBillet"><?= $this->clean( $billet['title'] ) ?></h3></a></td>
 
             <td>
                 <time><?= $this->clean( $billet['date'] ) ?></time>
@@ -31,7 +31,7 @@ $this->bodyclass = "formulaire"
 
             <td><a id="bouton" href="admin/edit/<?=$billet['id']?>"><input type="button" name="Editer" value="Editer" class="bouton1"></a>
             <td> <a id="bouton" href="admin/delete/<?=$billet['id']?>"><input type="button" name="Supprimer" value="Supprimer"
-                                                          class="bouton"></a></td></div>
+                                                          class="bouton_signal"></a></td></div>
 
         </tr>
     <?php endforeach; ?>

@@ -11,7 +11,6 @@ namespace App;
 use App\Framework\Router;
 
 
-
 require 'Autoloader.php';
 Autoloader::register();
 

@@ -1,5 +1,7 @@
+
+<div class="wrapper_mention">
 <br/>
-<h1>Mentions Légales</h1>
+<h1 id="boot_title2">Mentions Légales</h1>
 <br/>
 <h2>1. Présentation de notre site web</h2>
 
@@ -86,3 +88,4 @@
 <p>Soumis au droit français, le site web www.AlainForteroche.com est encadré par la loi n° 2004-2005 du 21 juin 2004
     pour la confiance dans l'économie numérique, l’article L.335-2 du Code de la Propriété Intellectuelle et la loi «
     informatique et libertés » du 6 janvier 1978 modifiée en 2004.</p>
+</div>
