@@ -13,7 +13,7 @@ echo '<h2>Mon Blog - Connexion</h2>' ?>
     <form action="connexion/connect" method="post">
         <div id="margin"><input name="login" type="text" placeholder="Entrez votre login" class="connect" required autofocus><br />
             <input name="mdp" type="password" placeholder="Entrez votre mot de passe" class="connect" required><br /></div>
-        <button type="submit" id="btn" class="btn btn-green">Connexion</button>
+        <button type="submit" class="bouton">Connexion</button>
     </form>
 
 <?php if (isset( $msgError )): ?>
