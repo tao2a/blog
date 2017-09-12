@@ -25,9 +25,7 @@ class ControllerConnexion extends Controller
     }
 
 
-    /**
-     *
-     */
+    
     public function index()
     {
         $this->generateView();

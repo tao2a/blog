@@ -32,7 +32,7 @@ class Router
         // Création du nom du fichier du contrôleur
         $classController = "App\\Controller\\Controller" . $controller;
         $fileController = "Controller\\" . $classController . ".php";
-        //if (file_exists( $fileController )) {
+    
         // Instanciation du contrôleur adapté à la requête
 
         $controller = new $classController();

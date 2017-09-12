@@ -272,7 +272,6 @@ footer {
     width: auto;
     height: auto;
     color: rgb(35, 35, 35);
-    /*margin: 50px 50px 50px;*/
     padding: 25px 50px;
     border: 1px solid;
 }
@@ -441,8 +440,8 @@ textarea {
     background-color: rgb(255, 255, 255);
 }
 
-th, tr:hover {
-
+table {
+margin: auto;
 }
 /*Fin des Tableaux*/
 
