@@ -26,7 +26,7 @@ class ControllerHome extends Controller
     public function index()
     {
         $billets = $this->billet->getList();
-        $this->generateView( array('billets' => $billets) );
+        $this->generateView(array('billets' => $billets));
 
 
     }
@@ -35,7 +35,7 @@ class ControllerHome extends Controller
     public function list()
     {
         $billets = $this->billet->getBillets();
-        $this->generateView( array('billets' => $billets) );
+        $this->generateView(array('billets' => $billets));
 
     }
 
@@ -44,8 +44,6 @@ class ControllerHome extends Controller
     {
         $this->generateView();
     }
-
-
 
 
 }

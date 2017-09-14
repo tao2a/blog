@@ -30,7 +30,8 @@ $this->title = "Mon Blog - " . $this->clean($billet['title']); ?>
                             <time class="time_reponse"><?= $this->clean($comment['date']) ?></time>
                         </p>
                     </div>
-                    <p ><?= $this->clean($comment['contenu']) ?><input type="submit" value="Signaler" class="bouton_signal"/></p>
+                    <p><?= $this->clean($comment['contenu']) ?><input type="submit" value="Signaler"
+                                                                      class="bouton_signal"/></p>
 
                     <br/>
 

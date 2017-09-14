@@ -29,33 +29,33 @@ class Session
 
     public function existAttribut($name)
     {
-        return (isset( $_SESSION[$name] ) && $_SESSION[$name] != "");
+        return (isset($_SESSION[$name]) && $_SESSION[$name] != "");
     }
 
     public function getAttribut($name)
     {
-        if ($this->existAttribut( $name )) {
+        if ($this->existAttribut($name)) {
             return $_SESSION[$name];
         } else {
-            throw new \Exception( "L'attribut '$name' est absent de la session" );
+            throw new \Exception("L'attribut '$name' est absent de la session");
         }
     }
 
-     public function setFlash($message)
-     {
-         $_SESSION['flash'] = $message;
-     }
+    public function setFlash($message)
+    {
+        $_SESSION['flash'] = $message;
+    }
 
-     public function flash()
-     {
-         $flash = false;
-         if (isset( $_SESSION['flash'] )) {
-             $flash = $_SESSION['flash'];
-             unset( $_SESSION['flash'] );
+    public function flash()
+    {
+        $flash = false;
+        if (isset($_SESSION['flash'])) {
+            $flash = $_SESSION['flash'];
+            unset($_SESSION['flash']);
 
-         }
-         return $flash;
+        }
+        return $flash;
 
-     }
+    }
 
 }

@@ -16,13 +16,13 @@ class User extends Model
      */
     public function connect($login, $mdp)
     {
-        $sql = "SELECT UTIL_ID AS id, UTIL_MDP as mdp FROM T_UTILISATEUR WHERE UTIL_LOGIN=? ";
-        $user = $this->executeRequest( $sql, array($login) );
+        $sql = "SELECT UTIL_ID AS id, UTIL_MDP AS mdp FROM T_UTILISATEUR WHERE UTIL_LOGIN=? ";
+        $user = $this->executeRequest($sql, array($login));
         if ($user->rowCount() == 1) {
             $user = $user->fetch();
 
-            return password_verify( $mdp, $user['mdp'] );
-        }else {
+            return password_verify($mdp, $user['mdp']);
+        } else {
             return false;
         }
 
@@ -40,11 +40,11 @@ class User extends Model
     {
         $sql = "SELECT UTIL_ID AS idUser, UTIL_LOGIN AS login, UTIL_MDP AS mdp 
             FROM T_UTILISATEUR WHERE UTIL_LOGIN=?";
-        $user = $this->executeRequest( $sql, array($login) );
+        $user = $this->executeRequest($sql, array($login));
         if ($user->rowCount() == 1)
             return $user->fetch();  // Accès à la première ligne de résultat
         else
-            throw new \Exception( "Aucun utilisateur ne correspond aux identifiants fournis" );
+            throw new \Exception("Aucun utilisateur ne correspond aux identifiants fournis");
     }
 
     //Changement du login
@@ -54,17 +54,17 @@ class User extends Model
         $sql = 'UPDATE T_UTILISATEUR
         SET UTIL_LOGIN  = ?
        WHERE UTIL_ID = ?';
-        $user = $this->executeRequest( $sql, array($login, $idUser) );
+        $user = $this->executeRequest($sql, array($login, $idUser));
     }
 
     //Changement du Mot de passe
-    public function updateMdp( $mdp, $id)
+    public function updateMdp($mdp, $id)
     {
-$hash = password_hash($mdp, PASSWORD_BCRYPT);
+        $hash = password_hash($mdp, PASSWORD_BCRYPT);
         $sql = 'UPDATE T_UTILISATEUR
         SET UTIL_MDP  = ?
        WHERE UTIL_ID = ?';
-        $user = $this->executeRequest( $sql, array($hash, $id) );
+        $user = $this->executeRequest($sql, array($hash, $id));
     }
 
 }

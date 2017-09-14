@@ -16,7 +16,7 @@ class Config
     public static function get($name, $defaultValue = null)
     {
         $parameters = self::getParameters();
-        if (isset( $parameters[$name] )) {
+        if (isset($parameters[$name])) {
             $value = $parameters[$name];
         } else {
             $value = $defaultValue;
@@ -29,13 +29,13 @@ class Config
     {
         if (self::$parameters == null) {
             $filePath = "Config/prod.ini";
-            if (!file_exists( $filePath )) {
+            if (!file_exists($filePath)) {
                 $filePath = "Config/dev.ini";
             }
-            if (!file_exists( $filePath )) {
-                throw new \Exception( "Aucun fichier de configuration n'a été trouvé" );
+            if (!file_exists($filePath)) {
+                throw new \Exception("Aucun fichier de configuration n'a été trouvé");
             } else {
-                self::$parameters = parse_ini_file( $filePath );
+                self::$parameters = parse_ini_file($filePath);
             }
         }
         return self::$parameters;

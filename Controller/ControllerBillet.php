@@ -31,30 +31,30 @@ class ControllerBillet extends Controller
     // Affiche les détails sur un billet
     public function index()
     {
-        $idBillet = $this->request->getParameter( "id" );
+        $idBillet = $this->request->getParameter("id");
 
-        $billet = $this->billet->getBillet( $idBillet );
-        $comments = $this->comment->getComments( $idBillet );
+        $billet = $this->billet->getBillet($idBillet);
+        $comments = $this->comment->getComments($idBillet);
 
-        $this->generateView( array('billet' => $billet, 'comments' => $comments) );
+        $this->generateView(array('billet' => $billet, 'comments' => $comments));
     }
 
     // Ajoute un commentaire sur un billet
     public function comment()
     {
-        $idBillet = $this->request->getParameter( "id" );
-        $author = $this->request->getParameter( "author" );
-        $contenu = $this->request->getParameter( "contenu" );
-        if (isset( $author ) && isset( $contenu ) && (!empty( $author ) && !empty( $contenu ))) {
+        $idBillet = $this->request->getParameter("id");
+        $author = $this->request->getParameter("author");
+        $contenu = $this->request->getParameter("contenu");
+        if (isset($author) && isset($contenu) && (!empty($author) && !empty($contenu))) {
 
 
-            $this->comment->addComment( $author, $contenu, $idBillet );
-            $this->request->getSession()->setFlash( 'Commentaire bien ajouté' );
+            $this->comment->addComment($author, $contenu, $idBillet);
+            $this->request->getSession()->setFlash('Commentaire bien ajouté');
             // Exécution de l'action par défaut pour réafficher la liste des billets
-            $this->executeAction( "index" );
+            $this->executeAction("index");
         } else {
-            $this->rediriger( "billet", "index", $idBillet );
-            $this->request->getSession()->setFlash( 'Tous les champs sont obligatoires' );
+            $this->rediriger("billet", "index", $idBillet);
+            $this->request->getSession()->setFlash('Tous les champs sont obligatoires');
         }
     }
 

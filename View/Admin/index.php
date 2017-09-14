@@ -17,15 +17,18 @@ $this->bodyclass = "formulaire"
 <div class="wrapper">
     <div id="container">
         <div class="admin_boot">
-            <h3 class="articles">Gestion des articles <br /> <a href="admin/articles"><input type="button" name="articles"
-                                                                                      value="Go !"
-                                                                                      class="bouton"></a></h3></div>
+            <h3 class="articles">Gestion des articles <br/> <a href="admin/articles"><input type="button"
+                                                                                            name="articles"
+                                                                                            value="Go !"
+                                                                                            class="bouton"></a></h3>
+        </div>
     </div>
     <div id="container">
         <div class="admin_boot">
-            <h3 class="articles">Gestion des commentaires <br /><a href="admin/listCom"><input type="button" name="comments"
-                                                                                    value="Go !"
-                                                                                    class="bouton"></a></h3>
+            <h3 class="articles">Gestion des commentaires <br/><a href="admin/listCom"><input type="button"
+                                                                                              name="comments"
+                                                                                              value="Go !"
+                                                                                              class="bouton"></a></h3>
 
         </div>
     </div>

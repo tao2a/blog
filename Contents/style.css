@@ -31,6 +31,8 @@ time {
 a {
     text-decoration: none;
 }
+
+
 hr {
     border-top: 3px double rgb(77, 77, 77);
 
@@ -62,8 +64,8 @@ header {
     font-family: 'Rouge Script', cursive;
     font-size: 2em;
     font-weight: normal;
-    border:1px solid black;
-    background-color: rgb(255,255,255);
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
     text-align: center;
     text-shadow: 1px 1px 2px rgb(8, 43, 52);
     margin: 50px;
@@ -81,8 +83,6 @@ header {
     text-shadow: 1px 1px 2px rgb(8, 43, 52);
 }
 
-
-
 .titreBillet_boot {
     color: rgb(124, 121, 93);
     font-family: 'Trocchi', serif;
@@ -91,7 +91,6 @@ header {
     line-height: 1;
     text-align: left;
 }
-
 
 .titreBlog {
     text-align: center;
@@ -105,11 +104,11 @@ header {
     line-height: 48px;
 }
 
-
 #title_ty {
     font-size: 1.2em;
     margin: 25px;
 }
+
 /*
 * ========Début de la NAV========
 */
@@ -118,7 +117,6 @@ header {
     top: 5px;
     margin: 0 auto;
 }
-
 
 input#toggle {
     display: none;
@@ -174,10 +172,7 @@ input#toggle ~ .menu {
  * ========Fin de la NAV========
  */
 
-
-
 /*========Page d'accueil========*/
-
 
 .boot {
     background: url("images/alaska.jpg") no-repeat fixed;
@@ -186,7 +181,6 @@ input#toggle ~ .menu {
     margin: 0;
     padding: 0;
 }
-
 
 .wrapper_boot {
     display: grid;
@@ -207,7 +201,6 @@ input#toggle ~ .menu {
 
 }
 
-
 .suite {
     font-style: italic;
     font-size: 0.9em;
@@ -218,14 +211,16 @@ input#toggle ~ .menu {
 #container_boot {
     width: 100%;
     background-color: rgba(255, 255, 255, 1);
-    padding:25px;
+    padding: 25px;
 }
 
 /*========Fin page d'accueil========*/
 
-
 /*========Footer========*/
 footer {
+    position: absolute;
+    left:0;
+    right: 0;
     text-align: center;
     color: rgb(255, 255, 255);
     width: auto;
@@ -261,10 +256,8 @@ footer {
 .shadowfilter:hover {
     -webkit-filter: drop-shadow(0px 0px 8px rgba(0, 231, 255, 0.8));
 }
+
 /*========Fin du footer========*/
-
-
-
 
 /*========Détail d'un article avec les réponses========*/
 
@@ -277,7 +270,7 @@ footer {
 }
 
 #reponse {
-width: auto;
+    width: auto;
     border: 1px solid;
     margin: 25px;
     padding: 25px;
@@ -291,9 +284,8 @@ width: auto;
 
 .auteur {
     font-size: 0.8em;
-    font-weight:bolder;
+    font-weight: bolder;
 }
-
 
 /*========Input========*/
 
@@ -323,8 +315,6 @@ input {
 
 /*========Fin des inputs========*/
 
-
-
 textarea {
     overflow: hidden;
     word-wrap: break-word;
@@ -333,8 +323,6 @@ textarea {
     height: 160px;
     background: rgb(255, 255, 255);
 }
-
-
 
 /*========Partie Admin========*/
 
@@ -361,7 +349,7 @@ textarea {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     font-size: 1.5em;
 }
 
@@ -378,8 +366,10 @@ textarea {
 /*========Vue du Billet========*/
 
 .episode {
-    border:1px solid black;
+    border: 1px solid black;
     background-color: rgb(244, 244, 244);
+    margin-left:15%;
+    margin-right:15%;
 
 }
 
@@ -389,6 +379,7 @@ textarea {
     font-size: 1.3em;
     line-height: 32px;
     margin: 0 0 24px;
+
 }
 
 .episode time {
@@ -409,11 +400,8 @@ textarea {
     line-height: 48px;
     text-align: center;
     text-shadow: 1px 1px 2px rgb(8, 43, 52);
+
 }
-
-
-
-
 
 /*========Tableaux========*/
 
@@ -429,7 +417,7 @@ textarea {
     color: rgb(0, 0, 0);
 }
 
- tr, td, th {
+tr, td, th {
     text-align: center;
     margin: auto;
     border: 1px solid rgb(96, 84, 72);
@@ -441,14 +429,13 @@ textarea {
 }
 
 table {
-margin: auto;
+    width: 80%;
+    margin: auto;
 }
+
 /*Fin des Tableaux*/
 
 /*========Les boutons========*/
-
-
-
 
 .bouton_signal {
     width: auto;
@@ -459,34 +446,34 @@ margin: auto;
     text-align: center;
     text-decoration: none;
     font: bold 12px/25px Arial, sans-serif;
-    color: #515151;
-    background: #d3d3d3;
-    text-shadow: 1px 1px 1px rgba(255,255,255, .22);
+    color: rgb(81, 81, 81);
+    background: rgb(211, 211, 211);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, .22);
 
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     border-radius: 30px;
 
-    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
-    -moz-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
-    box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, .29), inset 1px 1px 1px rgba(255, 255, 255, .44);
+    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, .29), inset 1px 1px 1px rgba(255, 255, 255, .44);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .29), inset 1px 1px 1px rgba(255, 255, 255, .44);
 
     -webkit-transition: all 0.15s ease;
     -moz-transition: all 0.15s ease;
     -o-transition: all 0.15s ease;
     transition: all 0.15s ease;
-    background: -moz-linear-gradient(top,  #d3d3d3 0%, #8a8a8a 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d3d3d3), color-stop(100%,#8a8a8a)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #d3d3d3 0%,#8a8a8a 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #d3d3d3 0%,#8a8a8a 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #d3d3d3 0%,#8a8a8a 100%); /* IE10+ */
-    background: linear-gradient(top,  #d3d3d3 0%,#8a8a8a 100%); /* W3C */
+    background: -moz-linear-gradient(top, #d3d3d3 0%, #8a8a8a 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(211, 211, 211)), color-stop(100%, rgb(138, 138, 138))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgb(211, 211, 211) 0%, rgb(138, 138, 138) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgb(211, 211, 211) 0%, rgb(138, 138, 138) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgb(211, 211, 211) 0%, rgb(138, 138, 138) 100%); /* IE10+ */
+    background: linear-gradient(top, rgb(211, 211, 211) 0%, rgb(138, 138, 138) 100%); /* W3C */
 }
 
 .bouton_signal:hover {
-    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.29), inset 0px 0px 2px rgba(0,0,0, .5);
-    -moz-box-shadow: 1px 1px 1px rgba(0,0,0,.29), inset 0px 0px 2px rgba(0,0,0, .5);
-    box-shadow: 1px 1px 1px rgba(0,0,0,.29), inset 0px 0px 2px rgba(0,0,0, .5);
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, .29), inset 0px 0px 2px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, .29), inset 0px 0px 2px rgba(0, 0, 0, .5);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .29), inset 0px 0px 2px rgba(0, 0, 0, .5);
 }
 
 .bouton1 {
@@ -498,36 +485,36 @@ margin: auto;
     text-align: center;
     text-decoration: none;
     font: bold 12px/25px Arial, sans-serif;
-    color: #19667d;
-    background: #70c9e3;
-    text-shadow: 1px 1px 1px rgba(255,255,255, .22);
+    color: rgb(25, 102, 125);
+    background: rgb(112, 201, 227);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, .22);
 
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     border-radius: 30px;
 
-    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
-    -moz-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
-    box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, .29), inset 1px 1px 1px rgba(255, 255, 255, .44);
+    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, .29), inset 1px 1px 1px rgba(255, 255, 255, .44);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .29), inset 1px 1px 1px rgba(255, 255, 255, .44);
 
     -webkit-transition: all 0.15s ease;
     -moz-transition: all 0.15s ease;
     -o-transition: all 0.15s ease;
     transition: all 0.15s ease;
-    background: -moz-linear-gradient(top,  #70c9e3 0%, #39a0be 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#70c9e3), color-stop(100%,#39a0be)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #70c9e3 0%,#39a0be 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #70c9e3 0%,#39a0be 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #70c9e3 0%,#39a0be 100%); /* IE10+ */
-    background: linear-gradient(top,  #70c9e3 0%,#39a0be 100%); /* W3C */
+    background: -moz-linear-gradient(top, #70c9e3 0%, #39a0be 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(112, 201, 227)), color-stop(100%, rgb(57, 160, 190))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgb(112, 201, 227) 0%, rgb(57, 160, 190) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgb(112, 201, 227) 0%, rgb(57, 160, 190) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgb(112, 201, 227) 0%, rgb(57, 160, 190) 100%); /* IE10+ */
+    background: linear-gradient(top, rgb(112, 201, 227) 0%, rgb(57, 160, 190) 100%); /* W3C */
 }
-
 
 .bouton1:hover {
-    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.29), inset 0px 0px 2px rgba(0,0,0, .5);
-    -moz-box-shadow: 1px 1px 1px rgba(0,0,0,.29), inset 0px 0px 2px rgba(0,0,0, .5);
-    box-shadow: 1px 1px 1px rgba(0,0,0,.29), inset 0px 0px 2px rgba(0,0,0, .5);
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, .29), inset 0px 0px 2px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, .29), inset 0px 0px 2px rgba(0, 0, 0, .5);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .29), inset 0px 0px 2px rgba(0, 0, 0, .5);
 }
+
 .bouton {
     width: auto;
     display: inline-block;
@@ -537,52 +524,37 @@ margin: auto;
     text-align: center;
     text-decoration: none;
     font: bold 12px/25px Arial, sans-serif;
-    color: #3e5706;
-    background: #a5cd4e;
-    text-shadow: 1px 1px 1px rgba(255,255,255, .22);
+    color: rgb(62, 87, 6);
+    background: rgb(165, 205, 78);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, .22);
 
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     border-radius: 30px;
 
-    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
-    -moz-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
-    box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, .29), inset 1px 1px 1px rgba(255, 255, 255, .44);
+    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, .29), inset 1px 1px 1px rgba(255, 255, 255, .44);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .29), inset 1px 1px 1px rgba(255, 255, 255, .44);
 
     -webkit-transition: all 0.15s ease;
     -moz-transition: all 0.15s ease;
     -o-transition: all 0.15s ease;
     transition: all 0.15s ease;
-    background: -moz-linear-gradient(top,  #a5cd4e 0%, #6b8f1a 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a5cd4e), color-stop(100%,#6b8f1a)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%); /* IE10+ */
-    background: linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%); /* W3C */
+    background: -moz-linear-gradient(top, #a5cd4e 0%, #6b8f1a 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(165, 205, 78)), color-stop(100%, rgb(107, 143, 26))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgb(165, 205, 78) 0%, rgb(107, 143, 26) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgb(165, 205, 78) 0%, rgb(107, 143, 26) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgb(165, 205, 78) 0%, rgb(107, 143, 26) 100%); /* IE10+ */
+    background: linear-gradient(top, rgb(165, 205, 78) 0%, rgb(107, 143, 26) 100%); /* W3C */
 }
 
 .bouton:hover {
-    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.29), inset 0px 0px 2px rgba(0,0,0, .5);
-    -moz-box-shadow: 1px 1px 1px rgba(0,0,0,.29), inset 0px 0px 2px rgba(0,0,0, .5);
-    box-shadow: 1px 1px 1px rgba(0,0,0,.29), inset 0px 0px 2px rgba(0,0,0, .5);
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, .29), inset 0px 0px 2px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, .29), inset 0px 0px 2px rgba(0, 0, 0, .5);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .29), inset 0px 0px 2px rgba(0, 0, 0, .5);
 }
 
-
-
-
-
-
 /*========Fin des boutons========*/
-
-
-
-
-
-
-
-
-
-
 
 #boot_flex {
     display: grid;
@@ -600,10 +572,6 @@ margin: auto;
     border-bottom-style: solid;
 
 }
-
-
-
-
 
 .wrapper {
     margin: 10%;
@@ -623,16 +591,13 @@ margin: auto;
     -1px -1px 2px rgb(255, 255, 255);
 }
 
-
-
-
-
 .wrapper_mention {
     width: 80%;
     height: auto;
     margin: 10%;
     background-color: rgba(255, 255, 255, 0.9);
 }
+
 /*========Flash========*/
 
 #flash {
@@ -649,6 +614,37 @@ margin: auto;
     transition: all 0.9s ease-in;
 }
 
+/*========404========*/
+
+.error404 footer{
+    position: absolute;
+    bottom:0;
+    left:0;
+    right: 0;
+    padding-top: 0;
+}
+
+video#bgvid {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: contain;
+}
+.error404 h2{
+    font-size: 3em;
+    color: #ebebeb;
+
+}
+
+
+
+
+
 
 
 
@@ -657,48 +653,52 @@ margin: auto;
 @media screen and (max-width: 768px) {
 
     html {
-width: 100%;
+        width: 100%;
         clear: both;
     }
-    .bouton_signal{
+
+    .bouton_signal {
         clear: both;
     }
+
     body {
         width: 100%;
-        padding:0;
+        padding: 0;
         font-size: 0.5em;
         font-family: 'Source Sans Pro', 'Avenir Next', 'Futura', 'Trebuchet MS', sans-serif;
     }
+
     header {
         width: 100%;
-        padding:0;
+        padding: 0;
     }
+
     * {
         font-size: 100%;
     }
 
-title {
-    text-align: center;
-}
-    thead
-    {
+    title {
+        text-align: center;
+    }
+
+    thead {
         font-size: 0;
         visibility: hidden;
     }
+
     table,
     tbody,
     tr,
     td,
-    th
-    {
+    th {
         display: block;
         width: auto;
 
     }
+
     input,
     textarea,
-    select
-    {
+    select {
         width: 98%;
     }
 
@@ -727,19 +727,18 @@ title {
         font-family: 'Rouge Script', cursive;
         font-size: 2em;
         font-weight: normal;
-        border:1px solid black;
-        background-color: rgb(255,255,255);
+        border: 1px solid black;
+        background-color: rgb(255, 255, 255);
         text-align: center;
         text-shadow: 1px 1px 2px rgb(8, 43, 52);
         margin-bottom: 50px;
 
     }
 
-
     #container_boot {
         width: 100%;
         background-color: rgba(255, 255, 255, 1);
-        padding:25px;
+        padding: 25px;
     }
 
     article {
@@ -748,32 +747,39 @@ title {
         padding: 0;
     }
 
-
     /*Fin page d'accueil*/
-
-
     /*========Footer========*/
     #logo {
         max-width: 100%;
         height: auto;
     }
+
     .shadowfilter {
         max-width: 100%;
         height: auto;
         padding: 0 5px 0 5px;
     }
+
     /*========Liste des chapitres========*/
-    .wrapper{
+    .wrapper {
         display: flex;
         flex-direction: column;
     }
 
-#boot_title {
+    #boot_title {
 
-    text-align: center;
-    font-family: 'Avenir Next', 'Futura', 'Trebuchet MS', sans-serif;
-   font-size: 2em;
-}
+        text-align: center;
+        font-family: 'Avenir Next', 'Futura', 'Trebuchet MS', sans-serif;
+        font-size: 2em;
+    }
+
+    /*========Erreur 404========*/
+    .error404 {
+        background: url("images/frogs.jpg")no-repeat center fixed;
+    }
+    #bgvid {
+        display: none;
+    }
 
 }
 

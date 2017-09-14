@@ -9,6 +9,8 @@
 namespace App\Framework;
 
 
+use App\Framework\Exception\Error404Exception;
+
 abstract class Controller
 {
 // Action à réaliser
@@ -32,12 +34,12 @@ abstract class Controller
 // Exécute l'Action à réaliser
     public function executeAction($action)
     {
-        if (method_exists( $this, $action )) {
+        if (method_exists($this, $action)) {
             $this->action = $action;
             $this->{$this->action}();
         } else {
-            $classController = get_class( $this );
-            throw new \Exception( "L'action '$action' n'est  pas défini dans la Classe $classController" );
+            $classController = get_class($this);
+            throw new Error404Exception();
         }
     }
 // Méthode abstraite qui correspond à l'action par défaut
@@ -55,21 +57,21 @@ abstract class Controller
         }
 
         // Détermination du nom du fichier vue à partir du nom du contrôleur actuel
-        $classController = get_class( $this );
-        $controller = str_replace( "App\\Controller\\Controller", "", $classController );
+        $classController = get_class($this);
+        $controller = str_replace("App\\Controller\\Controller", "", $classController);
         // Instanciation et génération de la vue
-        $view = new View( $actionView, $controller, $this->request->getSession() );
-        $view->generate( $donneesView );
+        $view = new View($actionView, $controller, $this->request->getSession());
+        $view->generate($donneesView);
     }
 
     public function rediriger($controller, $action = null, $id = null)
     {
-        $racineWeb = Config::get( "racineWeb", "/" );
-        $url =  $racineWeb . $controller . "/" . $action;
+        $racineWeb = Config::get("racineWeb", "/");
+        $url = $racineWeb . $controller . "/" . $action;
         if (!is_null($id)) {
-            $url .= "/". $id;
+            $url .= "/" . $id;
         }
-        header( "Location:" . $url);
+        header("Location:" . $url);
 
     }
 }

@@ -31,14 +31,14 @@ class Request
     // Renvoie vrai si le paramètre existe dans la requête
     public function existeParameter($name)
     {
-        return (isset( $this->parameters[$name] ) && $this->parameters[$name] != "");
+        return (isset($this->parameters[$name]) && $this->parameters[$name] != "");
     }
 
     // Renvoie la valeur du paramètre demandé
     // Lève une exception si le paramètre est introuvable
     public function getParameter($name, $default = false)
     {
-        if ($this->existeParameter( $name )) {
+        if ($this->existeParameter($name)) {
             return $this->parameters[$name];
         } else
             return $default;

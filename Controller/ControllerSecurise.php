@@ -20,10 +20,10 @@ abstract class ControllerSecurise extends Controller
 
     {
 
-        if ($this->request->getSession()->existAttribut( "idUser" )) {
-            parent::executeAction( $action );
+        if ($this->request->getSession()->existAttribut("idUser")) {
+            parent::executeAction($action);
         } else {
-            $this->rediriger( "connexion" );
+            $this->rediriger("connexion");
         }
     }
 }

@@ -27,23 +27,22 @@ class ControllerComment extends Controller
         $this->comment = new Comment();
     }
 
-public function index() {
+    public function index()
+    {
 
-}
+    }
 
     // Ajoute un signal sur un commentaire
     public function signal()
     {
-        $idCom = $this->request->getParameter( "id" );
-        $com = $this->comment->getComment( $idCom );
+        $idCom = $this->request->getParameter("id");
+        $com = $this->comment->getComment($idCom);
 
-        $this->comment->addSignal( $idCom );
-        $this->request->getSession()->setFlash( 'Commentaire signalé' );
+        $this->comment->addSignal($idCom);
+        $this->request->getSession()->setFlash('Commentaire signalé');
         // Exécution de l'action par défaut pour réafficher la liste des billets
-        $this->rediriger( "billet", "index", $com['bilId'] );
+        $this->rediriger("billet", "index", $com['bilId']);
     }
-
-
 
 
 }
