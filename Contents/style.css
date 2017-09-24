@@ -183,6 +183,8 @@ input#toggle ~ .menu {
 }
 
 .wrapper_boot {
+    margin: 10%;
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
@@ -267,6 +269,8 @@ footer {
     color: rgb(35, 35, 35);
     padding: 25px 50px;
     border: 1px solid;
+    margin: 50px;
+
 }
 
 #reponse {
@@ -366,8 +370,11 @@ textarea {
 /*========Vue du Billet========*/
 
 .episode {
-    border: 1px solid black;
-    background-color: rgb(244, 244, 244);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgb(73, 73, 73);
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgb(128, 128, 128),
+    -1px -1px 2px rgb(255, 255, 255);
     margin-left:15%;
     margin-right:15%;
 
@@ -576,7 +583,6 @@ table {
 .wrapper {
     margin: 10%;
     width: 80%;
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
@@ -773,12 +779,35 @@ video#bgvid {
         font-size: 2em;
     }
 
+    /*========Détail du billet========*/
+
+    .episode {
+        padding:05%;
+        margin:5px;
+    }
+
+    #reponse {
+        padding:05%;
+        margin:5px;
+    }
+
+
+
+
     /*========Erreur 404========*/
     .error404 {
         background: url("images/frogs.jpg")no-repeat center fixed;
     }
     #bgvid {
         display: none;
+    }
+    .bouton_signal, .bouton, .bouton1 {
+    width: 100%;
+}
+    .bouton {
+        font-size: 0.1em;
+        text-align: left;
+        margin:0.4em auto;
     }
 
 }

@@ -85,7 +85,7 @@ class Billet extends Model
             . ' BIL_TITRE as title, BIL_CONTENU as contenu, COUNT(T_COMMENTAIRE.COM_ID) as nbCom from T_BILLET '
             . ' LEFT JOIN T_COMMENTAIRE ON T_COMMENTAIRE.BIL_ID=T_BILLET.BIL_ID'
             . '  GROUP BY T_BILLET.BIL_ID'
-            . ' order by T_BILLET.BIL_ID limit 0, 3';
+            . ' order by T_BILLET.BIL_ID desc limit 0, 3';
         $billets = $this->executeRequest($sql);
         return $billets;
     }
