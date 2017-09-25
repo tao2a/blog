@@ -43,25 +43,28 @@ class ControllerAdmin extends ControllerSecurise
     public function changePass()
     {
 
-        $mdp = $this->request->getParameter('pass');
-        $verifPass = $this->request->getParameter('verifPass');
+        $mdp = $this->request->getParameter( 'pass' );
+        $verifPass = $this->request->getParameter( 'verifPass' );
 
         if ($mdp !== false && $verifPass !== false) {
             if ($mdp === $verifPass) {
-                if (preg_match("#^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W)(?!.*[<>]).{8,30}$#", $mdp)) {
-                    $this->user->updateMdp($mdp, $this->request->getSession()->getAttribut('idUser'));
+                if (preg_match( "#^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W)(?!.*[<>]).{8,30}$#", $mdp )) {
+                    $this->user->updateMdp( $mdp, $this->request->getSession()->getAttribut( 'idUser' ) );
+                    $this->rediriger( "admin", "index" );
+                    $this->request->getSession()->setFlash( 'Le mot de passe a été modifié' );
                 } else {
-                    $this->request->getSession()->setFlash('mots de passe non autorisé');
+
+                    $this->request->getSession()->setFlash( 'mots de passe non autorisé' );
                 }
 
             } else {
-                $this->request->getSession()->setFlash('Les mots de passe ne sont pas identiques');
+                $this->request->getSession()->setFlash( 'Les mots de passe ne sont pas identiques' );
             }
         } else {
-            $this->request->getSession()->setFlash('Action non autorisée');
+            $this->request->getSession()->setFlash( 'Action non autorisée' );
         }
-        $this->rediriger("admin/index");
-        $this->request->getSession()->setFlash('Le mot de passe a été modifié');
+        $this->rediriger( "admin", "index" );
+
 
     }
 
@@ -70,21 +73,22 @@ class ControllerAdmin extends ControllerSecurise
     public
     function changeLogin()
     {
-        $oldLogin = $this->request->getParameter('oldLogin');
-        $login = $this->request->getParameter('login');
+        $oldLogin = $this->request->getParameter( 'oldLogin' );
+        $login = $this->request->getParameter( 'login' );
         if ($oldLogin !== false && $login !== false) {
             if ($oldLogin !== $login) {
-                $this->user->updateLogin($this->request->getSession()->getAttribut('idUser'), $login);
+                $this->user->changeLogin( $this->request->getSession()->getAttribut( 'idUser' ), $login );
+                $this->rediriger( "admin", "index" );
+                $this->request->getSession()->setFlash( 'Le pseudo a été modifié' );
             } else {
-                $this->request->getSession()->setFlash('Le pseudo est le même, vous ne voulez donc pas le changer');
+                $this->request->getSession()->setFlash( 'Le pseudo est le même, vous ne voulez donc pas le changer' );
             }
 
-
         } else {
-            $this->request->getSession()->setFlash('Action non autorisée');
+            $this->request->getSession()->setFlash( 'Action non autorisée' );
         }
-        $this->rediriger("admin/index");
-        $this->request->getSession()->setFlash('Le pseudo a été modifié');
+        $this->rediriger( "admin", "index" );
+
     }
 
 
@@ -109,7 +113,7 @@ class ControllerAdmin extends ControllerSecurise
 
         if ($contenu !== false && $title !== false) {
             $this->billet->update($title, $contenu, $idBillet);
-            $this->rediriger("admin/articles");
+            $this->rediriger("admin", "articles");
             $this->request->getSession()->setFlash('Article modifié');
         } else {
             $this->generateView(array('msgError' => 'Tous les champs sont obligatoires', "billet" => $billet), "edit");

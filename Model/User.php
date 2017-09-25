@@ -48,7 +48,7 @@ class User extends Model
     }
 
     //Changement du login
-    public function updateLogin($idUser, $login)
+    public function changeLogin($idUser, $login)
     {
 
         $sql = 'UPDATE T_UTILISATEUR

@@ -21,7 +21,7 @@ abstract class Controller
 // Requête entrante
     protected $request;
 
-// Définitla requête entrante
+// Définit la requête entrante
 
     /**
      * @param mixed $request
